@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 
-import requests
-
 import logging
+import requests
 
 logging.basicConfig(level=logging.DEBUG)
 

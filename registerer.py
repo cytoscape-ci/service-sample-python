@@ -1,5 +1,5 @@
-import requests
 import json
+import requests
 
 HEADERS = {'Content-Type': 'application/json'}
 AGENT_ENDPOINT = "http://localhost:8080/register"
@@ -20,7 +20,7 @@ class ServiceRegisterer:
 
         res = requests.post(
             service_url,
-            data=json.dumps(reg),
+            data=json.dumps([reg]),
             headers=HEADERS)
 
         print("Got response from agent: ")

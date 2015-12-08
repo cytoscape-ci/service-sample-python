@@ -1,10 +1,9 @@
 from flask import Flask
 from flask_restful import Api
 
-from registerer import ServiceRegisterer
-
-from service_status import ServiceStatus
 from id_mapper_service import IdMapperService
+from registerer import ServiceRegisterer
+from service_status import ServiceStatus
 
 app = Flask(__name__)
 api = Api(app)

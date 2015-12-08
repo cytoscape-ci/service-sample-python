@@ -1,7 +1,8 @@
-from flask.ext.restful import Resource, reqparse
-from flask import request
-from id_mapper import IdMapper as mapper
 import json
+from flask import request
+from flask.ext.restful import Resource, reqparse
+
+from id_mapper import IdMapper as mapper
 
 
 class IdMapperService(Resource):
