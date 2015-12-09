@@ -1,14 +1,12 @@
 import json
+
 from flask import request
 from flask.ext.restful import Resource, reqparse
 
-from id_mapper import IdMapper as mapper
+from services.id_mapper import IdMapper as mapper
 
 
 class IdMapperService(Resource):
-
-    def __init__(self):
-        self.__parser = reqparse.RequestParser()
 
     def get(self):
 
@@ -23,10 +21,7 @@ class IdMapperService(Resource):
         dataBytes = request.stream.read()
         data = json.loads(dataBytes.decode("utf-8"))
 
-
         # Call actual mapper
-        result = mapper.convert(data["ids"], str(data["from"]),str(data["to"]))
-
-        print('----------------- OK')
+        result = mapper.convert(data["ids"], data["from"], data["to"])
 
         return result, 200

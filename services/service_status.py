@@ -3,6 +3,10 @@ from flask_restful import Resource
 
 class ServiceStatus(Resource):
 
+    """
+    Sample service for server status check.
+    """
+
     def get(self):
 
         summary = {
