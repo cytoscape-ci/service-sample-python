@@ -25,4 +25,4 @@ if __name__ == '__main__':
     ServiceRegisterer.register("idmapping", port=PORT_NUMBER, capacity=4)
 
     # Start the App
-    app.run(debug=True, port=PORT_NUMBER, use_reloader=False)
+    app.run(debug=True, host='0.0.0.0', port=PORT_NUMBER, use_reloader=False)
